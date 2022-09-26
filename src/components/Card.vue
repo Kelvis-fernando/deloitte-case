@@ -13,12 +13,11 @@
 import axios from "axios";
 import MD5 from "../utils/Md5";
 
-const ts = Number(new Date());
-
 // Neste caso seria ideal colocar as keys em um .env, porem decidi não colocar para que você possa subir o projeto e ver funcionando sem gerar nenhuma chave nova, mas fica este adendo.
 const publicKey = "5a237863b3cc2061003cbbc4fe20dc06";
 const privateKey = "fbf255068eccea6d0ef951b9f25626b57ab2fe72";
 
+const ts = Number(new Date());
 const hash = MD5(ts + privateKey + publicKey);
 const baseUrl = "https://gateway.marvel.com/v1/public/characters?ts=";
 
@@ -27,6 +26,7 @@ export default {
   data() {
     return {
       response: [],
+      imgValidation: "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
     };
   },
   created: function () {
@@ -43,7 +43,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgb(155, 218, 158);
+  background: #999;
   margin: 5px;
   width: 200px;
   border-radius: 5px;

@@ -26,9 +26,9 @@ import Nav from "./components/Nav.vue";
 }
 
 .card-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  grid-template-rows: 150px 150px 150px 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 15px;
 }
 </style>
