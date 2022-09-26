@@ -1,30 +1,18 @@
-<script setup>
-import Card from "./components/Card.vue";
-import Nav from "./components/Nav.vue";
-</script>
-
 <template>
   <div class="app">
-    <Nav />
+    <Nav heroes="heroes" />
     <div class="card-container">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
       <Card />
     </div>
   </div>
 </template>
 
-<style scoped>
-.app {
-  display: flex;
-}
+<script setup>
+import Card from "./components/Card.vue";
+import Nav from "./components/Nav.vue";
+</script>
 
+<style scoped>
 .card-container {
   display: flex;
   flex-wrap: wrap;
