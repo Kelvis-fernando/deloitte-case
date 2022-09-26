@@ -5,7 +5,7 @@
       alt="pokemon"
       class="image"
     />
-    <h4>{{ responses.name }}</h4>
+    <h4 class="name">{{ responses.name }}</h4>
   </div>
 </template>
 
@@ -39,22 +39,32 @@ export default {
 
 <style scoped>
 .card {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   background: #999;
   margin: 5px;
   width: 200px;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 .card:hover {
   box-shadow: 2px 2px 3px rgb(136, 136, 136);
 }
 
 .image {
-  background-color: #fff;
-  border-radius: 50%;
-  width: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+.name {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  background-color: rgba(5, 5, 5, 0.8);
+  width: 100%;
+  height: 30px;
+  color: #fff;
 }
 </style>
