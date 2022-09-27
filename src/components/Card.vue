@@ -17,13 +17,13 @@ export default {
     return {
       response: [],
       currentPage: 1,
-      maxPerPage: 24,
+      maxPerPage: 20,
       totalResults: 240,
       showloader: false,
       options: {
         method: "GET",
         url: "https://movies-app1.p.rapidapi.com/api/movies",
-        params: { page: "1", limit: "24" },
+        params: { page: "1", limit: "20" },
         headers: {
           "X-RapidAPI-Key": "ad1a634496mshcc6365583085806p15f9bdjsn07f41c943008",
           "X-RapidAPI-Host": "movies-app1.p.rapidapi.com",
