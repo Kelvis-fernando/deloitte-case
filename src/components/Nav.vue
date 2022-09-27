@@ -1,29 +1,10 @@
 <template>
   <div class="nav">
     <img src="../assets/logo.png" alt="Logo" height="30" width="40" />
-    <input v-model="search" class="search" type="text" placeholder="Procure pelo seu heroi" />
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      search: "",
-    };
-  },
-  computed: {
-    filteredHeroes: () => {
-      return this.heroes.filter((hero) => {
-        return hero.name.match(this.search);
-      });
-    },
-  },
-  props: {
-    heroes: [],
-  },
-};
-</script>
+<script></script>
 
 <style scoped>
 .nav {

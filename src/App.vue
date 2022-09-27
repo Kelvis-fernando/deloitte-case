@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <Nav heroes="heroes" />
+    <Nav />
     <div class="card-container">
       <Card />
     </div>

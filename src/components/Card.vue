@@ -22,7 +22,7 @@ export default {
       showloader: false,
       options: {
         method: "GET",
-        url: `https://movies-app1.p.rapidapi.com/api/movies?page=${this.currentPage}`,
+        url: "https://movies-app1.p.rapidapi.com/api/movies",
         params: { page: "1", limit: "24" },
         headers: {
           "X-RapidAPI-Key": "ad1a634496mshcc6365583085806p15f9bdjsn07f41c943008",
@@ -47,13 +47,13 @@ export default {
   methods: {
     scrollTrigger() {
       const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+        entries.forEach(async (entry) => {
           if (entry.intersectionRatio > 0 && this.currentPage < this.pageCount) {
             this.showloader = true;
             this.currentPage += 1;
             this.showloader = false;
 
-            axios
+            await axios
               .get(`https://movies-app1.p.rapidapi.com/api/movies?page=${this.currentPage}`, {
                 headers: {
                   "X-RapidAPI-Key": "ad1a634496mshcc6365583085806p15f9bdjsn07f41c943008",
